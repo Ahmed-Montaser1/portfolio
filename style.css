@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'raleway', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(255, 241, 149);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    background-color: rgb(255, 241, 149);
+    box-shadow: 0 1px 1px black;
+}
+
+.home-section{
+    background-color: rgb(255, 241, 149);
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-section #particles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.home-section h1{
+    color: #000;
+    font-size: 60px;
+    margin-top: 170px;;
+}
+
+.first-con h3{
+    color: #000;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.last-con .scroll {
+    color: #000;
+    bottom: 20%;
+    left: 50%;
+    font-size: 37px;
+    position: absolute;
+    transform: translate(0, -50%);
+    transition: all 0.5s;
+    text-align: center;
+    
+}
+
+.last-con .scroll:hover{
+    opacity: 0.7;
+}
+
+.last-con .scroll::before{
+    content: "";
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    top: 1px;
+    left: -11px;
+    width: 44px;
+    height: 44px;
+    z-index: -1;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.46);
+    border-radius: 100%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%, 100%{
+        opacity: 0;
+    }
+    15%, 45%{
+        opacity: 1;
+    }
+    60%{
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1);
+        opacity: 0;
+    }
+}
+
+.about-section, #features{
+    background-color: rgb(255, 241, 149);
+    color: #000;
+}
+
+.head-about, #features .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 20px 0px 30px;
+}
+
+.head-about h2, #features .header h1{
+    font-size: 20px;
+    color: #000;
+}
+
+.head-about button, #features .header button{
+    text-decoration: none;
+    font-size: 1em;
+    color: #000;
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: rgb(255, 241, 149);
+}
+
+.head-about button:hover, #features .header button:hover{
+    border-color: #000;
+    box-shadow: none;
+}
+
+.about-con, #features .card{
+    padding: 30px;
+    margin: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.about-con:hover, #features .card:hover{
+    border-color: #000;
+    box-shadow: none;
+}
+
+.p-about{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.p-about h2, #features .card .info h1{
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.p-about p, #features .card .info p{
+    color: #121010;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+
+.about-con img{
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+}
+
+.skills-section{
+    background-color: rgb(255, 241, 149);
+    color: #000;
+}
+
+.head-skill{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0px 30px;
+}
+
+.skills-section h2{
+    font-size: 20px;
+    color: #000;
+}
+
+.skills-section button{
+    text-decoration: none;
+    font-size: 1em;
+    color: #000;
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: rgb(255, 241, 149);
+}
+
+#features .feature-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#features .feature-cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 350px;
+}
+
+#features .feature-cards .card .info i{
+    color: #000;
+    font-size: 8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+
+
+@media screen and (max-width: 720px){
+    .first-con h1{
+        font-size: 3rem;
+    }
+    .first-con h3{
+        font-size: 1.1rem;
+    }
+    .about-con{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
